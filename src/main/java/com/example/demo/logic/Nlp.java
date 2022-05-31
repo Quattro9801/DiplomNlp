@@ -23,7 +23,7 @@ public class Nlp {
         Integer i = 0;
         int k = 8;
         for (CoreLabel tok : document.tokens()) {
-            world.add(tok.word());
+            world.add(tok.word() + " " + tok.tag());
             /*if (tok.word().equals(".")) {
                 for (String w:world) {
                     // triple.addAll(world);
