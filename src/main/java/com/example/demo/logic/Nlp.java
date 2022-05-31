@@ -21,7 +21,7 @@ public class Nlp {
         HashMap<Integer, List<String>> map = new HashMap<>();
         // display tokens
         Integer i = 0;
-        int k = 0;
+        int k = 8;
         for (CoreLabel tok : document.tokens()) {
             world.add(tok.word());
             /*if (tok.word().equals(".")) {
