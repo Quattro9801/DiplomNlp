@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Nlp {
     public static List<String> getTriples() {
-        String text = "Screen working in TV. Phone show 5 hours. He loves hamburgers.";
+        String text = "Screen working in TV. Phone show 5 hours. He loves hamburgers. Monitor doesn't working.";
         Properties props = new Properties();
         // set the list of annotators to run
         props.setProperty("annotators", "tokenize,ssplit,pos,lemma");
