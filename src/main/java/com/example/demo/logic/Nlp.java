@@ -24,17 +24,7 @@ public class Nlp {
         int k = 8;
         for (CoreLabel tok : document.tokens()) {
             world.add(tok.word() + " " + tok.tag());
-            /*if (tok.word().equals(".")) {
-                for (String w:world) {
-                    // triple.addAll(world);
-                    triple.set(i++, w);
-                }
-                i=0;
-                map.put(k++, triple);
-                world.clear();*/
-
-                //System.out.println(String.format("///////////////////////////////////////"))//System.out.println(String.format("Слово", tok.word() + "Часть речи", tok.tag()));
-                //}
+         
             }
 
 
