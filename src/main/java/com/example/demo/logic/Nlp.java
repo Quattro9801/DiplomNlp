@@ -19,7 +19,7 @@ public class Nlp {
         List<String> world = new ArrayList<>();
         List<String> triple = new ArrayList<>();
         HashMap<Integer, List<String>> map = new HashMap<>();
-        // display tokens
+        // display token
         Integer i = 0;
         int k = 8;
         for (CoreLabel tok : document.tokens()) {
