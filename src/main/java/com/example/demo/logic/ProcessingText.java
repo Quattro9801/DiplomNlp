@@ -6,9 +6,8 @@ import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 
 import java.util.*;
 
-public class Nlp {
-    public static List<String> getTriples() {
-        String text = "Screen working in TV. Phone show 5 hours. He loves hamburgers. Monitor doesn't working.";
+public class ProcessingText {
+    public static List<String> getTriples(String text) {
         Properties props = new Properties();
         // set the list of annotators to run
         props.setProperty("annotators", "tokenize,ssplit,pos,lemma");
@@ -17,17 +16,16 @@ public class Nlp {
         // create a document object
         CoreDocument document = pipeline.processToCoreDocument(text);
         List<String> world = new ArrayList<>();
-        List<String> triple = new ArrayList<>();
-        HashMap<Integer, List<String>> map = new HashMap<>();
         // display token
-        Integer i = 0;
-        int k = 8;
         for (CoreLabel tok : document.tokens()) {
-            world.add(tok.word() + " " + tok.tag());
-         
+            if (tok.tag().contains("NN") || tok.tag().contains("VBG") || tok.tag().contains("VBZ") || tok.tag().contains("POS") ||
+                    tok.tag().contains("VB") ||  tok.tag().contains("VBD") ||  tok.tag().contains("VBZ") || tok.tag().contains("VBG") ||
+            tok.tag().contains("VBN") || tok.tag().contains("VBP") || tok.tag().contains("NNS") || tok.tag().contains("NNP") ||
+            tok.tag().contains("NNPS") || tok.tag().contains("JJ") || tok.tag().contains("JJS") || tok.tag().contains("JJR")) {
+
+                     world.add(tok.lemma() + " ");
             }
-
-
+        }
             return world;
         }
     }
