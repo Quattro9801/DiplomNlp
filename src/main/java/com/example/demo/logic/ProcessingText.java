@@ -9,7 +9,7 @@ import java.util.*;
 public class ProcessingText {
     public static List<String> getTriples(String text) {
         Properties props = new Properties();
-        // set the list of annotators to run
+        // set the list of annotators to run123466qwe
         props.setProperty("annotators", "tokenize,ssplit,pos,lemma");
         // build pipeline
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
